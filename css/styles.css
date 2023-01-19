@@ -1,0 +1,27 @@
+html {
+    background: linear-gradient(to bottom, white, orange 80%, yellow);
+    padding: 0 2% 2% 2%;
+}
+
+.container {
+    font-size: larger;
+    font-style: oblique;
+}
+
+div {
+    border: 2px;
+    border-radius: 10vw;
+    background-color: lightcoral;
+}
+
+.div_titulo {
+    background-color: red !important;
+}
+
+.div_body {
+    background-color: red;
+}
+
+.div_practicas {
+    background: linear-gradient(to bottom, white, orange 80%, yellow);
+}
