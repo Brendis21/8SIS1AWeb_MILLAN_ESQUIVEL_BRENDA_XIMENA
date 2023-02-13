@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     background-color: rgb(72, 144, 207);
 }
@@ -9,3 +10,16 @@ div{
 button{
     background-color: rgb(224, 133, 238);
 }
+=======
+body{
+    background-color: rgb(72, 144, 207);
+}
+
+div{
+    background-color: hwb(309 89% 8%);
+}
+
+button{
+    background-color: rgb(224, 133, 238);
+}
+>>>>>>> f359f2db5729921976498f85babf8c28da27782d
