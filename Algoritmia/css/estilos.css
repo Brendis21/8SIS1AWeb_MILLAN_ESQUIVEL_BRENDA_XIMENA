@@ -1,11 +1,11 @@
 body{
-    background-color: rgb(148, 85, 116);
+    background-color: rgb(115, 85, 148);
 }
 
 div{
-    background-color: hwb(313 78% 5%);
+    background-color: hwb(279 78% 5%);
 }
 
 button{
-    background-color: rgb(224, 133, 238);
+    background-color: rgb(217, 133, 238);
 }
