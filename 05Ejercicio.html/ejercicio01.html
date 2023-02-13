@@ -1,0 +1,54 @@
+<! DOCTYPE html>
+<html lang="es">
+<cabeza>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS</title>
+    <link rel="stylesheet" href="css/styleejerciciosjs.css">
+</cabeza>
+<cuerpo>
+    <Br>
+    <div class="contenedor" >
+        <form method="get" name="formulario" acción="">
+            <label> Formulario para el calculo de inversion de 
+ Capital al 2% mensual </etiqueta>
+                <div class="table-content" >
+                    <mesa>
+                        <Tr>
+                            <td>Introduce la cantidad que deseas invertir</td>
+                            <Td>
+                                <input type="text" name="cantidad" 
+                                onkeypress="return validarn(event)">
+                            </Td>
+                        </Tr>
+                        <Tr>
+                            <td></td>
+                            <Td>
+                                <input type="button" value="Calcular Interes"
+                                name="enviar" onclick="interes()" >
+                            </Td>
+                        </Tr>
+                        <Tr>
+                            <td>Su saldo total con el interes al 2% 
+                                mensual es de:</td>
+                                <Td>
+                                    < input type="text" readonly="readonly"
+                                    class="input_text" name="sueldoI" id="cantidadI" >
+                                </Td>
+
+                        </Tr>
+                        <Tr>
+                            <td></td>
+                            <Td>
+                                <input type="button" value="Borrar datos"
+                                name="borrar" onclick="borrardatos()">
+                            </Td>
+                        </Tr>
+                    </mesa>
+                </Div>
+        </forma>
+    </Div>
+    <script src="JS/interes.js" ></script >
+</cuerpo>
+</.html>
