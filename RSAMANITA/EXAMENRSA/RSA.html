@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generador de claves RSA</title>
+  
+<script src="./funciones.js"></script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #FEEFF1;
+      margin: 0;
+    }
+
+    .container {
+      width: 1000px;
+      padding: 20px;
+      background-color: #ecb8e5;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgb(161, 90, 146);
+    }
+
+    h1 {
+      text-align: center;
+      color: #dd34aa;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #e62ea9;
+    }
+
+    label {
+      font-weight: bold;
+      color: #e62ea9;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      background-color: #FEE2E7;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #ad50b1;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #debadf;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #FEE2E7;
+      border-radius: 5px;
+    }
+
+    textarea[readonly] {
+      background-color: #FFD7E2;
+      color: #E62E4D;
+    }
+  </style>
+  <script src="./funciones.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de claves RSA</h1>
+
+    <h2>Generar claves</h2>
+    <label for="p">Valor de p (primo de 4 dígitos): </label>
+    <input type="number" id="p" min="1000" max="9999" required>
+    <br>
+    <label for="q">Valor de q (primo de 4 dígitos): </label>
+    <input type="number" id="q" min="1000" max="9999" required>
+    <br>
+    <button onclick="generarClaves()">Generar claves</button>
+    <br>
+    <div class="result">
+      <p>Clave pública: <span id="clavePublica"></span></p>
+      <p>Clave privada: <span id="clavePrivada"></span></p>
+      <p id="calculoFi"></p>
+      <p id="calculoN"></p>
+      <p id="calculoE"></p>
+      <p id="calculoD"></p>
+    </div>
+
+    <h2>Cifrar mensaje</h2>
+    <label for="mensaje">Mensaje: </label>
+    <textarea id="mensaje" rows="3" required></textarea>
+    <br>
+    <button onclick="cifrarMensaje()">Cifrar mensaje</button>
+    <br>
+    <div class="result">
+      <label for="mensajeCifrado">Mensaje cifrado: </label>
+      <textarea id="mensajeCifrado" readonly></textarea>
+    </div>
+
+    <h2>Descifrar mensaje</h2>
+    <label for="mensajeCifradoUsuario">Mensaje cifrado: </label>
+    <textarea id="mensajeCifradoUsuario" rows="3" required></textarea>
+    <br>
+    <button onclick="descifrarMensajeUsuario()">Descifrar mensaje</button>
+    <br>
+    <div class="result">
+      <label for="mensajeDescifradoUsuario">Mensaje descifrado: </label>
+      <textarea id="mensajeDescifradoUsuario" readonly></textarea>
+    </div>
+  </div>
+</body>
+</html>
